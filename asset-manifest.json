@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/github.io/react-shop/static/css/main.3c8af98f.css",
-    "main.js": "/github.io/react-shop/static/js/main.29115fac.js",
-    "index.html": "/github.io/react-shop/index.html",
-    "main.3c8af98f.css.map": "/github.io/react-shop/static/css/main.3c8af98f.css.map",
-    "main.29115fac.js.map": "/github.io/react-shop/static/js/main.29115fac.js.map"
+    "main.css": "/react-shop/static/css/main.3c8af98f.css",
+    "main.js": "/react-shop/static/js/main.29115fac.js",
+    "index.html": "/react-shop/index.html",
+    "main.3c8af98f.css.map": "/react-shop/static/css/main.3c8af98f.css.map",
+    "main.29115fac.js.map": "/react-shop/static/js/main.29115fac.js.map"
   },
   "entrypoints": [
     "static/css/main.3c8af98f.css",
