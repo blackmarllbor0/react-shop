@@ -1,11 +1,8 @@
-export const GoodsItem = ({ 
-    mainId,
-    displayName,
-    displayDescription, 
-    price,
-    displayAssets, 
-    addToBascket = Function.prototype
-}) => {
+import { useDispatch } from 'react-redux';
+import { addToBasket } from '../reducer';
+
+export const GoodsItem = ({ mainId, displayName, displayDescription,  price, displayAssets }) => {
+    const dispatch = useDispatch();
     return (
         <div className="card">
             <div className="card-image">
@@ -20,11 +17,11 @@ export const GoodsItem = ({
             <div className="card-action">
                 <button 
                     className="btn cyan lighten-1" 
-                    onClick={() => addToBascket({
+                    onClick={() => dispatch(addToBasket({
                         mainId,
                         displayName,
                         price: price.finalPrice
-                    })}
+                    }))}
                 > 
                         Купить
                 </button>

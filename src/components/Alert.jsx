@@ -1,18 +1,21 @@
+import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from "react";
 
-export const Alert = ({name = '', closeAlert = Function.prototype}) => {
+import { closeAlert } from '../reducer';
+
+export const Alert = () => {
+    const { alertName } = useSelector(state => state.index);
+    const dispatch = useDispatch();
+    
     useEffect(() => {
-        const timerID = setTimeout(closeAlert, 3000);
+        const timerID = setTimeout(dispatch(closeAlert), 3000);
 
         return () => clearTimeout(timerID);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [name]);
+    }, []);
     
     return (
         <div id="toast-container">
-            <div className="toast">
-                {name} добавлен в корзину
-            </div>
+            <div className="toast"> {alertName} добавлен в корзину </div>
         </div>
     );
 };
